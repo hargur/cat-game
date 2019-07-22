@@ -28,7 +28,7 @@ const styles: stylesType = {
 const GridView = (props: GridViewProps) => {
   return <div style={styles.containerStyle}>
     <div style={{width: 190}}>{props.items.map((item, index) => <div key={index} style={styles.gridboxStyle}>
-      {item && item.id && <GridItemAddedOnClick id={item.id} image={item.image} />}
+      {index}{item && item.id && <GridItemAddedOnClick id={item.id} image={item.image} />}
     </div>)}</div>
   </div>
 }

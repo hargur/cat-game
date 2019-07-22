@@ -14,10 +14,13 @@ const Board = () => {
     addedItem[lastFilledValue] = value
     setLastFilledValue(lastFilledValue+1)
     setCloneState(addedItem)
-
+    console.log(cloneState,lastFilledValue)
+    
     //to check the values in a row
     if((lastFilledValue+1) % 3 === 0 ){
-      if(addedItem[lastFilledValue].id === addedItem[lastFilledValue -1].id || addedItem[lastFilledValue - 1].id === addedItem[lastFilledValue - 2].id || addedItem[lastFilledValue - 1].id === addedItem[lastFilledValue].id){
+      if(addedItem[lastFilledValue].id === addedItem[lastFilledValue -1].id || 
+        addedItem[lastFilledValue - 1].id === addedItem[lastFilledValue - 2].id || 
+        addedItem[lastFilledValue - 1].id === addedItem[lastFilledValue].id){
         setwin("YOU LOST")
       }
     }

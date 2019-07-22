@@ -6,14 +6,15 @@ export interface ItemGridProp{
   clickedItem: any
 }
 
-export const GridItemAddedOnClick = (props: ItemType) => (
-  <img key={props.id} 
-      alt={props.image} 
-      src={props.image}
+export const GridItemAddedOnClick = (props: ItemType) => {
+  const {id, image} = props;
+  return <img key={id} 
+      alt={image} 
+      src={image}
       style={{width: 'auto', height: '100%'}}
   />
-      
-)
+}
+
 const ItemGrid = (props: ItemGridProp) => {
   return <div style={{flex: 1}}>
     {props.data.map((item: ItemType) => (
