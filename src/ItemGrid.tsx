@@ -6,10 +6,7 @@ export interface ItemGridProp{
   clickedItem: any
 }
 
-
-/*<GridItem id={item.id} image={item.image} clicked={() => props.clickedItem}/>*/
-
-export const GridItem = (props: ItemType) => (
+export const GridItemAddedOnClick = (props: ItemType) => (
   <img key={props.id} 
       alt={props.image} 
       src={props.image}
