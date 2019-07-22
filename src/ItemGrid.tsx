@@ -21,7 +21,7 @@ const ItemGrid = (props: ItemGridProp) => {
       <img onClick={() => {props.clickedItem(item)}} 
       key={item.id} 
       alt={item.image} 
-      style={{width: '25%'}} 
+      style={{width: '25%', cursor: 'pointer'}} 
       src={item.image}/>)
       )}
   </div>
